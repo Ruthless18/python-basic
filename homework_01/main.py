@@ -20,6 +20,7 @@ PRIME = "prime"
 
 
 def is_prime(nums):
+    b = 0
     for i in nums:
         if nums % i == 0:
             b = b + 1
