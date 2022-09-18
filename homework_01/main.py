@@ -20,11 +20,13 @@ PRIME = "prime"
 
 
 def is_prime(nums):
-    for num in nums:
-        if num == 0:
-            return False
-        if num // num:
-            return True
+    for i in nums:
+        if nums % i == 0:
+            b = b + 1
+    if (b <= 0):
+        return True
+    else:
+        return False
 
 
 def filter_numbers(nums, filter_type):
