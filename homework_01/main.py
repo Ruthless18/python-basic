@@ -26,7 +26,6 @@ def is_prime(nums):
         else:
             return False
 
-
 def filter_numbers(nums, filter_type):
     """
     функция, которая на вход принимает список из целых чисел,
@@ -43,4 +42,5 @@ def filter_numbers(nums, filter_type):
     if filter_type == EVEN:
         return [num for num in nums if num % 2 == 0]
     if filter_type == PRIME:
-        return is_prime(nums)
+        if is_prime(nums) == True:
+            return nums
