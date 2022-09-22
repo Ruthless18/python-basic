@@ -20,11 +20,10 @@ PRIME = "prime"
 
 
 def is_prime(nums):
-    for num in nums:
-        if num != 0 and num // num:
-            return True
-        else:
+    for num in range(2, (nums//2)+1):
+        if nums % num == 0:
             return False
+        return True
 
 def filter_numbers(nums, filter_type):
     """
@@ -42,5 +41,4 @@ def filter_numbers(nums, filter_type):
     if filter_type == EVEN:
         return [num for num in nums if num % 2 == 0]
     if filter_type == PRIME:
-        if is_prime(nums) == True:
-            return nums
+        return is_prime(nums)
