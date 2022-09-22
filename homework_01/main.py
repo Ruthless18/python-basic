@@ -24,7 +24,7 @@ def is_prime(nums):
         if num < 2:
             return False
         for num in range(2, int(num ** 0.5 + 1) ):
-            if nums % num == 0:
+            if num % num == 0:
                 return False
         else:
             return True
