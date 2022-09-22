@@ -20,10 +20,14 @@ PRIME = "prime"
 
 
 def is_prime(nums):
-    for num in range(2, (nums//2)+1):
+    if nums == 1 or 0:
+        return False
+    for num in range(2, (nums ** 0.5) + 1):
         if nums % num == 0:
             return False
+    else:
         return True
+
 
 def filter_numbers(nums, filter_type):
     """
