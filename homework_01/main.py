@@ -45,4 +45,4 @@ def filter_numbers(nums, filter_type):
     if filter_type == EVEN:
         return [num for num in nums if num % 2 == 0]
     if filter_type == PRIME:
-        return list(map(is_prime, nums))
+        return list(filter(is_prime, nums))
